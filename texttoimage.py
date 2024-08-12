@@ -3,7 +3,7 @@ import boto3
 import json
 import bunny_key
 import asyncio
-
+import datetime
 
 def generate_image(prompt, width=512, height=512, number_of_images=3,cfg_scale=10, seed=10):
   for _ in '1':
