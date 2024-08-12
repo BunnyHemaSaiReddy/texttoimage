@@ -7,15 +7,9 @@ con = mysql.connector.connect(
             
 )
 
-'''import streamlit as st
-db_config = st.secrets["mysql"]
-# Initialize connection.
-con = st.connection('mysql', type='sql')'''
-
 cor=con.cursor()
 cor.execute("select * from secret;")
 r=cor.fetchone()
-print(r)
 con.close()
 api_key=r[0]+'FzBzcZX'
 access_id= r[1]+'VKZLQISHY'
