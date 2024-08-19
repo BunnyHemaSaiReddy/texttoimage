@@ -56,13 +56,13 @@ def generate_image(prompt, width=512, height=512, number_of_images=3,cfg_scale=1
            st.image(l[j-1], caption=f"Image {j}", use_column_width=True)
           j+=1
           image_bytes = BytesIO(image_data)
-            download_filename = f"generated_image_{idx + 1}.png"
-            st.download_button(
-                label="Download Image",
-                data=image_bytes,
-                file_name=download_filename,
-                mime="image/png"
-            )
+          download_filename = f"generated_image_{idx + 1}.png"
+          st.download_button(
+              label="Download Image",
+              data=image_bytes,
+              file_name=download_filename,
+              mime="image/png"
+          )
 
 
 if __name__=="__main__":
