@@ -2,6 +2,7 @@ import streamlit as st
 import boto3
 import json
 import os
+import io
 import base64
 import bunny_key
 import asyncio
@@ -55,7 +56,7 @@ def generate_image(prompt, width=512, height=512, number_of_images=3,cfg_scale=1
           with i:
            st.image(l[j-1], caption=f"Image {j}", use_column_width=True)
           j+=1
-          image_bytes = BytesIO(image_data)
+          image_bytes = io.BytesIO(image_data)
           download_filename = f"generated_image_{idx + 1}.png"
           st.download_button(
               label="Download Image",
