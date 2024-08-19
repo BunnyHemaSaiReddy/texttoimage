@@ -1,11 +1,11 @@
 import mysql.connector
-con = mysql.connector.connect(
-            host='sql12.freesqldatabase.com',
-            user='sql12725000',
-            passwd='vWBNC74tBJ',
-            database='sql12725000'
-            
-)
+config = {
+    'user': 'avnadmin',
+    'password': 'AVNS_dw-GhEn5H2OmZl82p_a',  
+    'host': 'mysql-38e489bf-bunnyhemasaireddy-8196.b.aivencloud.com',
+    'port': 13610,
+    'database': 'secret_keys'
+}
 
 cor=con.cursor()
 cor.execute("select * from secret;")
