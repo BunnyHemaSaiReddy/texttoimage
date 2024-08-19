@@ -57,7 +57,7 @@ def generate_image(prompt, width=512, height=512, number_of_images=3,cfg_scale=1
            st.image(l[j-1], caption=f"Image {j}", use_column_width=True)
           j+=1
           image_bytes = io.BytesIO(image_data)
-          download_filename = f"generated_image_{idx + 1}.png"
+          download_filename = f"generated_image_by_bunny.png"
           st.download_button(
               label="Download Image",
               data=image_bytes,
